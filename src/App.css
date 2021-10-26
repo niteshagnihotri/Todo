@@ -1,38 +1,119 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: rgb(252, 216, 172);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.projects{
+  border-radius:8px;
+  background-color: rgb(10, 56, 58);
+	box-shadow: 2px 2px 100px #07200f81 !important;
+  width: fit-content;
+  min-height: 65vh;
+  height: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   align-items: center;
+  font-size: 1em;
+  color:white;
+  padding: 0px 20px;
+}
+.heading{
+	font-size: 2.3rem;
+	padding: 25px 0px;
+  word-spacing: 2px;
+	margin-bottom: 0px;
+  letter-spacing: 2px;
+	text-shadow: 0px 0px 2px #ffffff;
+}
+.search{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.search input[type=text]{
+  width: 100%;
   color: white;
+  padding: 10px;
+  font-size:1rem;
+  opacity: 0.8;
+  background-color: rgb(5, 29, 26);
+  border-radius:5px;
+  border:1px solid white;
+  outline: none;
+}
+.search input:focus{
+  outline: none;
+}
+::placeholder{
+  font-size: 20px;
+}
+.search input[type=submit]{
+  margin: 0px 10px;
+  align-items: center;
+  padding: 0px 10px;
+  border: 0px;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  font-variant: small-caps;
+  transition:all 2s;
+  background-color: rgb(240, 171, 87);
 }
 
-.App-link {
-  color: #61dafb;
+.search input[type=submit]:hover{
+    opacity: 0.7;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.tasksdiv{
+  height: auto;
+  color: rgb(255, 255, 255);
+  overflow-y:auto;
+}
+.task{
+  display:flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 5px 0px;
+  padding: 5px 10px;
+}
+.task h4{
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  font-weight: 400;
+}
+.icon{
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+.icon:hover{
+  opacity:0.7;
+}
+
+@media screen and (max-width:400px) {
+  .projects{
+    width: 90%;
+    padding: 0px 10px;
+    min-height: 80vh;
   }
-  to {
-    transform: rotate(360deg);
+}
+@media screen and (max-width:330px) {
+  .projects{
+    width: 95%;
+    padding: 0px 10px;
+    min-height: 90vh;
   }
+  .search input[type=text]{
+    padding: 5px;
+    border: 0px;
+  }
+  
 }
